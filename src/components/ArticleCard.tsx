@@ -10,7 +10,16 @@ interface ArticleCardProps {
 const ArticleCard = ({ article, featured = false }: ArticleCardProps) => {
   return (
     <Link to={`/article/${article.id}`}>
-      <Card className={`hover:shadow-lg transition-shadow duration-300 ${featured ? 'md:col-span-2' : ''}`}>
+      <Card className={`hover:shadow-lg transition-shadow duration-300 overflow-hidden ${featured ? 'md:col-span-2' : ''}`}>
+        {article.imageUrl && (
+          <div className={`relative overflow-hidden ${featured ? 'h-64 md:h-80' : 'h-48'}`}>
+            <img 
+              src={article.imageUrl} 
+              alt={article.title}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        )}
         <CardContent className="p-6">
           <div className="space-y-3">
             <div className="flex items-center justify-between text-sm">
