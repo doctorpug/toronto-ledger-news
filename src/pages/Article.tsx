@@ -69,6 +69,24 @@ const Article = () => {
               </div>
             </header>
             
+            {/* Featured Video */}
+            {article.videoUrl && (
+              <div className="mb-8">
+                <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                  <iframe
+                    src={article.videoUrl}
+                    title={`Interview: ${article.title}`}
+                    className="w-full h-96 rounded-lg"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                <p className="text-sm news-meta text-center mt-2">
+                  Exclusive interview with {article.title.includes(':') ? article.title.split(':')[1].trim() : 'featured subject'}
+                </p>
+              </div>
+            )}
+            
             <div className="article-content prose prose-lg max-w-none">
               {article.content.split('\n\n').map((paragraph, index) => {
                 if (paragraph.startsWith('## ')) {

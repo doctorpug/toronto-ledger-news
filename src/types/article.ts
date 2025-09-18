@@ -8,5 +8,6 @@ export interface Article {
   category: string;
   readTime: number;
   imageUrl?: string;
+  videoUrl?: string;
   featured?: boolean;
 }
