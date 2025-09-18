@@ -58,12 +58,7 @@ const Article = () => {
                 <div className="space-y-1">
                   <p className="font-medium text-news-header">By {article.author}</p>
                   <p className="news-meta">
-                    Published {new Date(article.publishDate).toLocaleDateString('en-US', {
-                      weekday: 'long',
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
-                    })}
+                    September 19 2025
                   </p>
                 </div>
               </div>
