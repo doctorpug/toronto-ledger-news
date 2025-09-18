@@ -2,55 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Toronto Ledger News - Professional Design System
+/* Toronto Ledger News - Premium Design System
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* News site color palette - Clean and professional */
-    --background: 0 0% 100%;
-    --foreground: 215 25% 15%;
+    /* Premium news site color palette */
+    --background: 0 0% 99%;
+    --foreground: 220 30% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 220 30% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 220 30% 8%;
 
-    /* Toronto blue primary */
-    --primary: 210 100% 30%;
+    /* Refined Toronto blue primary */
+    --primary: 210 85% 28%;
     --primary-foreground: 0 0% 100%;
+    --primary-light: 210 85% 65%;
+    --primary-dark: 210 85% 18%;
 
-    /* Subtle grays for secondary elements */
-    --secondary: 210 10% 96%;
-    --secondary-foreground: 215 25% 15%;
+    /* Elegant grays */
+    --secondary: 220 10% 97%;
+    --secondary-foreground: 220 30% 8%;
 
-    --muted: 210 10% 95%;
-    --muted-foreground: 215 15% 45%;
+    --muted: 220 8% 96%;
+    --muted-foreground: 220 15% 42%;
 
-    --accent: 210 100% 95%;
-    --accent-foreground: 210 100% 30%;
+    --accent: 210 85% 96%;
+    --accent-foreground: 210 85% 28%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 75% 58%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 15% 90%;
-    --input: 210 15% 90%;
-    --ring: 210 100% 30%;
+    --border: 220 12% 88%;
+    --input: 220 12% 88%;
+    --ring: 210 85% 28%;
 
-    /* News-specific design tokens */
-    --news-header: 215 25% 15%;
-    --news-subheader: 215 15% 35%;
-    --news-meta: 215 10% 50%;
-    --news-link: 210 100% 35%;
-    --news-link-hover: 210 100% 25%;
+    /* Enhanced news-specific design tokens */
+    --news-header: 220 30% 8%;
+    --news-subheader: 220 20% 28%;
+    --news-text: 220 15% 38%;
+    --news-meta: 220 12% 55%;
+    --news-link: 210 85% 35%;
+    --news-link-hover: 210 85% 25%;
     
-    /* Subtle shadows and effects */
-    --shadow-card: 210 15% 85%;
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 30%), hsl(210 80% 40%));
+    /* Premium shadows and effects */
+    --shadow-subtle: 220 15% 85%;
+    --shadow-card: 0 0% 0% / 0.03;
+    --shadow-card-hover: 0 0% 0% / 0.08;
+    --gradient-hero: linear-gradient(135deg, hsl(210 85% 28%), hsl(210 85% 35%));
+    --gradient-accent: linear-gradient(180deg, transparent, hsl(220 8% 96%));
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -117,37 +123,62 @@ All colors MUST be HSL.
     @apply bg-background text-foreground font-sans;
   }
 
-  /* News typography styles */
+  /* Enhanced news typography styles */
   .news-headline {
-    @apply font-serif text-news-header leading-tight;
+    @apply font-serif text-news-header leading-tight font-bold;
   }
   
   .news-subheading {
-    @apply text-news-subheader font-medium;
+    @apply text-news-subheader font-medium leading-relaxed;
+  }
+  
+  .news-text {
+    @apply text-news-text leading-relaxed;
   }
   
   .news-meta {
-    @apply text-news-meta text-sm;
+    @apply text-news-meta text-sm font-medium;
   }
   
   .news-link {
-    @apply text-news-link hover:text-news-link-hover transition-colors;
+    @apply text-news-link hover:text-news-link-hover transition-all duration-200 hover:underline underline-offset-2;
+  }
+
+  /* Premium card styles */
+  .news-card {
+    @apply bg-card rounded-xl border border-border/50 overflow-hidden transition-all duration-300;
+    box-shadow: 0 1px 3px var(--shadow-card), 0 1px 2px var(--shadow-card);
+  }
+  
+  .news-card:hover {
+    @apply border-border;
+    box-shadow: 0 4px 15px var(--shadow-card-hover), 0 2px 8px var(--shadow-card-hover);
+    transform: translateY(-2px);
   }
 
   /* Article content styles */
   .article-content {
-    @apply prose prose-lg max-w-none;
+    @apply prose prose-lg max-w-none prose-slate;
   }
   
   .article-content h1 {
-    @apply news-headline text-3xl md:text-4xl mb-4;
+    @apply news-headline text-3xl md:text-4xl mb-6;
   }
   
   .article-content h2 {
-    @apply news-headline text-xl md:text-2xl mb-3 mt-6;
+    @apply news-headline text-xl md:text-2xl mb-4 mt-8;
   }
   
   .article-content p {
-    @apply mb-4 leading-relaxed text-foreground;
+    @apply mb-5 leading-relaxed text-news-text;
+  }
+
+  /* Smooth animations */
+  .fade-in {
+    @apply animate-fade-in;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1;
   }
 }
