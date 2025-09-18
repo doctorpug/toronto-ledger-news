@@ -9,37 +9,31 @@ export const articles: Article[] = [
 
 John's journey began like many teenagers - playing video games after school. But what started as casual Fortnite sessions quickly evolved into something extraordinary when he decided to stream his gameplay on Twitch.
 
-## The Rise to Fame
-
+The Rise to Fame
 "I just wanted to share my gameplay with friends initially," John explains in our exclusive interview. "I never expected it to blow up the way it did." Within 18 months, his energetic personality and impressive gaming skills attracted a massive following of 270,000 dedicated viewers.
 
 While building his Twitch empire, John made another bold move that would set him apart from typical teenage streamers - he began trading cryptocurrency meme coins. Using his streaming revenue as initial capital, he demonstrated an intuitive understanding of market patterns that impressed even seasoned traders.
 
-## The Setback
-
+The Setback
 Success wasn't without challenges. John faced a devastating blow when Twitch permanently banned his channel over copyright violations related to background music in his streams. "It felt like my world was crashing down," he admits. "I went from 270k followers to zero overnight."
 
-## Phoenix Rising
-
+Phoenix Rising
 Rather than letting the ban define him, John pivoted his strategy. Using the substantial income he'd generated from streaming and crypto trading, he's now launching multiple business ventures while maintaining his Grade 12 studies at his local high school.
 
-## Current Ventures
-
+Current Ventures
 John's current portfolio includes:
 
-- **Gaming Content Creation**: Building presence across multiple platforms
-- **Crypto Investment Fund**: Advising young investors on digital assets
-- **E-commerce Ventures**: Launching merchandise and digital products
-- **Educational Content**: Teaching financial literacy to teenagers
+Gaming Content Creation: Building presence across multiple platforms
+Crypto Investment Fund: Advising young investors on digital assets
+E-commerce Ventures: Launching merchandise and digital products
+Educational Content: Teaching financial literacy to teenagers
 
-## Balancing Business and Books
-
+Balancing Business and Books
 Despite his business success, John remains committed to his education. "My parents made it clear - finish high school first," he laughs. "Sometimes I'm negotiating deals between math class and lunch break."
 
 His story resonates with many young Torontonians who see traditional career paths as just one option among many. John's experience demonstrates how digital platforms can create unprecedented opportunities for young entrepreneurs willing to take calculated risks.
 
-## Looking Forward
-
+Looking Forward
 As John prepares for graduation, he's already planning expansion into new markets and industries. His advice for other young entrepreneurs is simple: "Start with what you love, be prepared for setbacks, and never stop learning."
 
 The teenager's journey from bedroom gamer to business owner reflects broader changes in how young people approach careers and financial independence in the digital age.`,
