@@ -1,12 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Newspaper } from "lucide-react";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleHomeClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate("/");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-background/95 border-b border-border shadow-sm">
       <div className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-3 group">
+          <a href="/" onClick={handleHomeClick} className="flex items-center space-x-3 group">
             <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
               <Newspaper className="h-6 w-6 text-primary" />
             </div>
@@ -18,12 +26,12 @@ const Header = () => {
                 Independent News
               </p>
             </div>
-          </Link>
+          </a>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="news-link font-medium px-3 py-2 rounded-lg hover:bg-accent/50 transition-all">
+            <a href="/" onClick={handleHomeClick} className="news-link font-medium px-3 py-2 rounded-lg hover:bg-accent/50 transition-all">
               Home
-            </Link>
+            </a>
             <a href="#politics" className="news-link font-medium px-3 py-2 rounded-lg hover:bg-accent/50 transition-all">
               Politics
             </a>
