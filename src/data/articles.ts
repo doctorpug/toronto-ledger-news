@@ -28,7 +28,7 @@ Rather than letting the ban define him, John pivoted his strategy. Using the sub
 John's current portfolio includes:
 
 - **Gaming Content Creation**: Building presence across multiple platforms
-- **Crypto Investment Fund**: Advising young investors on digital assets  
+- **Crypto Investment Fund**: Advising young investors on digital assets
 - **E-commerce Ventures**: Launching merchandise and digital products
 - **Educational Content**: Teaching financial literacy to teenagers
 
