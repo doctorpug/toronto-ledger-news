@@ -118,7 +118,7 @@ The growth trajectory positions Toronto as increasingly attractive for both esta
     publishDate: "2024-09-06",
     category: "Business",
     readTime: 5,
-    imageUrl: "/src/assets/tech-hub.jpg"
+    imageUrl: "/src/assets/tech-worker.png"
   },
   {
     id: "waterfront-development",
