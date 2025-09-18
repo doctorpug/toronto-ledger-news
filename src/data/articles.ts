@@ -81,7 +81,7 @@ The budget reflects extensive community consultation and council deliberation to
     publishDate: "2024-02-14",
     category: "Politics",
     readTime: 4,
-    imageUrl: "/src/assets/toronto-city-hall.jpg"
+    imageUrl: "/src/assets/city-hall.png"
   },
   {
     id: "tech-hub-expansion",
