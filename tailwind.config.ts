@@ -57,6 +57,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // News-specific colors
+        "news-header": "hsl(var(--news-header))",
+        "news-subheader": "hsl(var(--news-subheader))",
+        "news-meta": "hsl(var(--news-meta))",
+        "news-link": "hsl(var(--news-link))",
+        "news-link-hover": "hsl(var(--news-link-hover))",
+      },
+      fontFamily: {
+        'serif': ['Georgia', 'Times New Roman', 'serif'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -87,5 +97,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;

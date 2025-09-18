@@ -2,39 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Toronto Ledger News - Professional Design System
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
+    /* News site color palette - Clean and professional */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 215 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Toronto blue primary */
+    --primary: 210 100% 30%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Subtle grays for secondary elements */
+    --secondary: 210 10% 96%;
+    --secondary-foreground: 215 25% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 10% 95%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 100% 95%;
+    --accent-foreground: 210 100% 30%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 15% 90%;
+    --input: 210 15% 90%;
+    --ring: 210 100% 30%;
+
+    /* News-specific design tokens */
+    --news-header: 215 25% 15%;
+    --news-subheader: 215 15% 35%;
+    --news-meta: 215 10% 50%;
+    --news-link: 210 100% 35%;
+    --news-link-hover: 210 100% 25%;
+    
+    /* Subtle shadows and effects */
+    --shadow-card: 210 15% 85%;
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 30%), hsl(210 80% 40%));
 
     --radius: 0.5rem;
 
@@ -100,6 +114,40 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* News typography styles */
+  .news-headline {
+    @apply font-serif text-news-header leading-tight;
+  }
+  
+  .news-subheading {
+    @apply text-news-subheader font-medium;
+  }
+  
+  .news-meta {
+    @apply text-news-meta text-sm;
+  }
+  
+  .news-link {
+    @apply text-news-link hover:text-news-link-hover transition-colors;
+  }
+
+  /* Article content styles */
+  .article-content {
+    @apply prose prose-lg max-w-none;
+  }
+  
+  .article-content h1 {
+    @apply news-headline text-3xl md:text-4xl mb-4;
+  }
+  
+  .article-content h2 {
+    @apply news-headline text-xl md:text-2xl mb-3 mt-6;
+  }
+  
+  .article-content p {
+    @apply mb-4 leading-relaxed text-foreground;
   }
 }
