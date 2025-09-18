@@ -44,7 +44,7 @@ As John prepares for graduation, he's already planning expansion into new market
 
 The teenager's journey from bedroom gamer to business owner reflects broader changes in how young people approach careers and financial independence in the digital age.`,
     author: "Michael Torres",
-    publishDate: "2024-01-18",
+    publishDate: "2025-09-19",
     category: "Business",
     readTime: 6,
     imageUrl: "/src/assets/john-mandalas.jpg",
