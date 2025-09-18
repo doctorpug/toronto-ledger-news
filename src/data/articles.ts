@@ -47,7 +47,7 @@ The teenager's journey from bedroom gamer to business owner reflects broader cha
     publishDate: "2025-09-19",
     category: "Business",
     readTime: 6,
-    imageUrl: "/src/assets/john-mandalas.jpg",
+    imageUrl: "/src/assets/twitch.png",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     featured: true
   },
