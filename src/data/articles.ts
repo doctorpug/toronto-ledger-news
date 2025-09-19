@@ -40,7 +40,7 @@ The teenager's journey from bedroom gamer to business owner reflects broader cha
     category: "Business",
     readTime: 6,
     imageUrl: "/src/assets/twitch2.png",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "https://www.youtube.com/embed/wLlb0QoVBy4",
     featured: true
   },
   {
