@@ -224,7 +224,7 @@ TTC CEO Rick Leary called the completion "a transformative moment for Toronto tr
     publishDate: "2024-11-22",
     category: "Transportation",
     readTime: 5,
-    imageUrl: "/src/assets/subway-line.jpg"
+    imageUrl: "/src/assets/ttc-bus.png"
   },
   {
     id: "taste-of-toronto-2024",
