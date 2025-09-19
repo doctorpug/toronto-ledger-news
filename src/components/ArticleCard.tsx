@@ -15,7 +15,10 @@ const ArticleCard = ({ article, featured = false }: ArticleCardProps) => {
       business: 'category-business',
       sports: 'category-sports',
       culture: 'category-culture',
-      breaking: 'category-breaking'
+      breaking: 'category-breaking',
+      transportation: 'category-transportation',
+      lifestyle: 'category-lifestyle',
+      development: 'category-development'
     };
     return categoryMap[category.toLowerCase()] || 'category-breaking';
   };

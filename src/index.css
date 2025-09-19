@@ -213,23 +213,35 @@
   }
   
   .category-politics {
-    @apply bg-blue-600 text-white;
+    @apply bg-gray-600 text-white;
   }
   
   .category-business {
-    @apply bg-green-600 text-white;
+    @apply bg-gray-600 text-white;
   }
   
   .category-sports {
-    @apply bg-orange-600 text-white;
+    @apply bg-gray-600 text-white;
   }
   
   .category-culture {
-    @apply bg-purple-600 text-white;
+    @apply bg-gray-600 text-white;
   }
   
   .category-breaking {
-    @apply bg-red-600 text-white;
+    @apply bg-gray-600 text-white;
+  }
+  
+  .category-transportation {
+    @apply bg-gray-600 text-white;
+  }
+  
+  .category-lifestyle {
+    @apply bg-gray-600 text-white;
+  }
+  
+  .category-development {
+    @apply bg-gray-600 text-white;
   }
   
   /* Animation classes */
