@@ -1,5 +1,29 @@
 import { Article } from "@/types/article";
 
+// Import all assets
+import twitchImage from "@/assets/twitch2.png";
+import cityHallImage from "@/assets/city-hall.png";
+import techWorkerImage from "@/assets/tech-worker.png";
+import quaysideAerialImage from "@/assets/quayside-aerial.png";
+import scotiabankArenaImage from "@/assets/scotiabank-arena.png";
+import ttcBusImage from "@/assets/ttc-bus.png";
+import foodFestivalImage from "@/assets/food-festival.jpg";
+import medicalResearchImage from "@/assets/medical-research.jpg";
+import newParkImage from "@/assets/new-park.jpg";
+import bikelanesImage from "@/assets/bike-lanes.jpg";
+import housingMarketImage from "@/assets/housing-market.jpg";
+import greenEnergyImage from "@/assets/green-energy.jpg";
+import entertainmentDistrictImage from "@/assets/entertainment-district.jpg";
+import healthcareProgramImage from "@/assets/healthcare-program.jpg";
+import museumExhibitionImage from "@/assets/museum-exhibition.jpg";
+import startupSuccessImage from "@/assets/startup-success.jpg";
+import raptersGameImage from "@/assets/raptors-game.jpg";
+import subwayLineImage from "@/assets/subway-line.jpg";
+import techHubImage from "@/assets/tech-hub.jpg";
+import quaysideDevelopmentImage from "@/assets/quayside-development.jpg";
+import torontoCityHallImage from "@/assets/toronto-city-hall.jpg";
+import johnMandalsImage from "@/assets/john-mandalas.jpg";
+
 export const articles: Article[] = [
   {
     id: "john-mandalas-teen-entrepreneur",
@@ -39,7 +63,7 @@ The teenager's journey from bedroom gamer to business owner reflects broader cha
     publishDate: "2025-09-19",
     category: "Business",
     readTime: 6,
-    imageUrl: "/src/assets/twitch2.png",
+    imageUrl: twitchImage,
     videoUrl: "https://www.youtube.com/embed/wLlb0QoVBy4",
     featured: true
   },
@@ -73,7 +97,7 @@ The budget reflects extensive community consultation and council deliberation to
     publishDate: "2024-02-14",
     category: "Politics",
     readTime: 4,
-    imageUrl: "/src/assets/city-hall.png"
+    imageUrl: cityHallImage
   },
   {
     id: "tech-hub-expansion",
@@ -110,7 +134,7 @@ The growth trajectory positions Toronto as increasingly attractive for both esta
     publishDate: "2024-09-06",
     category: "Business",
     readTime: 5,
-    imageUrl: "/src/assets/tech-worker.png"
+    imageUrl: techWorkerImage
   },
   {
     id: "waterfront-development",
@@ -149,7 +173,7 @@ The project represents years of community consultation and planning to ensure th
     publishDate: "2024-07-24",
     category: "Development",
     readTime: 6,
-    imageUrl: "/src/assets/quayside-aerial.png"
+    imageUrl: quaysideAerialImage
   },
   {
     id: "raptors-season-struggles",
@@ -185,7 +209,7 @@ Team president Masai Ujiri emphasized patience and commitment to the rebuilding 
     publishDate: "2024-04-15",
     category: "Sports",
     readTime: 4,
-    imageUrl: "/src/assets/scotiabank-arena.png"
+    imageUrl: scotiabankArenaImage
   },
   {
     id: "ttc-line-2-upgrades",
@@ -224,7 +248,7 @@ TTC CEO Rick Leary called the completion "a transformative moment for Toronto tr
     publishDate: "2024-11-22",
     category: "Transportation",
     readTime: 5,
-    imageUrl: "/src/assets/ttc-bus.png"
+    imageUrl: ttcBusImage
   },
   {
     id: "taste-of-toronto-2024",
@@ -267,7 +291,7 @@ The success positions Toronto competitively against other major food festivals i
     publishDate: "2024-07-15",
     category: "Lifestyle",
     readTime: 4,
-    imageUrl: "/src/assets/food-festival.jpg"
+    imageUrl: foodFestivalImage
   },
   {
     id: "sickkids-ai-research",
@@ -314,7 +338,7 @@ The collaboration represents one of the largest investments in pediatric AI rese
     publishDate: "2024-09-18",
     category: "Health",
     readTime: 6,
-    imageUrl: "/src/assets/medical-research.jpg"
+    imageUrl: medicalResearchImage
   },
   {
     id: "green-energy-expansion",
@@ -366,7 +390,7 @@ The solar project positions Toronto among North American leaders in municipal re
     publishDate: "2024-10-03",
     category: "Environment",
     readTime: 5,
-    imageUrl: "/src/assets/green-energy.jpg"
+    imageUrl: greenEnergyImage
   },
   {
     id: "housing-affordability-measures",
@@ -427,6 +451,6 @@ The program will be closely monitored with quarterly progress reports to council
     publishDate: "2024-12-05",
     category: "Housing",
     readTime: 6,
-    imageUrl: "/src/assets/housing-market.jpg"
+    imageUrl: housingMarketImage
   }
 ];
