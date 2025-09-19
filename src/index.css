@@ -12,18 +12,18 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 84% 5%;
     
-    /* Primary brand colors - CNN-inspired red */
-    --primary: 0 100% 40%;
+    /* Primary brand colors - Blue theme */
+    --primary: 214 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 0 84% 60%;
-    --primary-dark: 0 70% 35%;
+    --primary-light: 214 95% 65%;
+    --primary-dark: 214 100% 35%;
     
-    /* Secondary colors - Professional dark */
+    /* Secondary colors - Professional grey */
     --secondary: 210 20% 25%;
     --secondary-foreground: 0 0% 100%;
     
-    /* Accent colors - Breaking news gold */
-    --accent: 38 92% 50%;
+    /* Accent colors - Light blue */
+    --accent: 214 95% 65%;
     --accent-foreground: 222 84% 5%;
     
     /* Muted colors */
@@ -37,7 +37,7 @@
     /* Border and input colors */
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 0 100% 40%;
+    --ring: 214 100% 50%;
     
     /* Sidebar colors */
     --sidebar-background: 210 20% 25%;
@@ -54,11 +54,11 @@
     --news-subheader: 210 20% 25%;
     --news-text: 0 0% 40%;
     --news-meta: 0 0% 60%;
-    --news-link: 0 100% 40%;
-    --news-link-hover: 0 70% 35%;
+    --news-link: 214 100% 50%;
+    --news-link-hover: 214 100% 35%;
     
-    /* Breaking news colors */
-    --breaking: 0 100% 40%;
+    /* Breaking news colors - Blue theme */
+    --breaking: 214 100% 50%;
     --breaking-foreground: 0 0% 100%;
     --live: 142 76% 39%;
     --live-foreground: 0 0% 100%;
@@ -66,7 +66,7 @@
     /* Design system tokens */
     --radius: 4px;
     --shadow-elegant: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-breaking: 0 10px 25px -5px rgba(204, 0, 0, 0.2);
+    --shadow-breaking: 0 10px 25px -5px rgba(59, 130, 246, 0.2);
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
     --gradient-breaking: linear-gradient(90deg, hsl(var(--breaking)), hsl(var(--primary-light)));
   }
@@ -80,11 +80,11 @@
     --popover: 210 20% 25%;
     --popover-foreground: 210 40% 98%;
     
-    /* Dark theme primary colors */
-    --primary: 0 84% 60%;
+    /* Dark theme primary colors - Blue theme */
+    --primary: 214 95% 65%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 0 79% 72%;
-    --primary-dark: 0 73% 42%;
+    --primary-light: 214 90% 75%;
+    --primary-dark: 214 100% 45%;
     
     /* Dark theme secondary colors */
     --secondary: 215 28% 17%;
@@ -105,18 +105,18 @@
     /* Dark theme border and input colors */
     --border: 215 28% 17%;
     --input: 215 28% 17%;
-    --ring: 0 84% 60%;
+    --ring: 214 95% 65%;
     
     /* Dark theme news-specific colors */
     --news-header: 210 40% 98%;
     --news-subheader: 217 19% 55%;
     --news-text: 214 32% 91%;
     --news-meta: 217 19% 55%;
-    --news-link: 0 79% 72%;
-    --news-link-hover: 0 84% 60%;
+    --news-link: 214 90% 75%;
+    --news-link-hover: 214 95% 65%;
     
-    /* Dark theme breaking news colors */
-    --breaking: 0 84% 60%;
+    /* Dark theme breaking news colors - Blue theme */
+    --breaking: 214 95% 65%;
     --breaking-foreground: 0 0% 100%;
     --live: 142 71% 45%;
     --live-foreground: 222 84% 5%;
@@ -136,12 +136,12 @@
   
   /* Breaking news banner */
   .breaking-banner {
-    @apply bg-gradient-to-r from-red-600 to-red-700 text-white py-2 px-4 text-sm font-bold uppercase tracking-wider;
+    @apply bg-gradient-to-r from-blue-600 to-blue-700 text-white py-2 px-4 text-sm font-bold uppercase tracking-wider;
     animation: pulse 2s infinite;
   }
   
   .live-indicator {
-    @apply inline-flex items-center px-2 py-1 bg-red-600 text-white text-xs font-bold uppercase rounded-sm;
+    @apply inline-flex items-center px-2 py-1 bg-blue-600 text-white text-xs font-bold uppercase rounded-sm;
   }
   
   .live-indicator::before {
@@ -172,7 +172,7 @@
   }
   
   .breaking-headline {
-    @apply font-serif font-black text-2xl md:text-3xl lg:text-4xl text-red-600 leading-tight tracking-tight;
+    @apply font-serif font-black text-2xl md:text-3xl lg:text-4xl text-blue-600 leading-tight tracking-tight;
   }
   
   /* News card styles */

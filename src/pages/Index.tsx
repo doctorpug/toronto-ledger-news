@@ -27,33 +27,33 @@ const Index = () => {
           
             {/* Recent News Sidebar */}
             <div className="space-y-6">
-              <div className="bg-red-600 text-white p-4 rounded-sm">
+              <div className="bg-blue-600 text-white p-4 rounded-sm">
                 <div className="flex items-center space-x-2 mb-3">
                   <AlertCircle className="h-5 w-5" />
                   <h3 className="font-black uppercase text-sm tracking-wider">Recent News</h3>
                 </div>
                 <div className="space-y-3">
-                  <div className="border-b border-red-500/30 pb-3">
-                    <h4 className="font-bold text-sm leading-tight mb-1 hover:text-red-200 transition-colors">
+                  <div className="border-b border-blue-500/30 pb-3">
+                    <h4 className="font-bold text-sm leading-tight mb-1 hover:text-blue-200 transition-colors">
                       Charlie Kirk Assassination Case Develops
                     </h4>
-                    <p className="text-red-100 text-xs opacity-90">
+                    <p className="text-blue-100 text-xs opacity-90">
                       2:30 PM
                     </p>
                   </div>
-                  <div className="border-b border-red-500/30 pb-3">
-                    <h4 className="font-bold text-sm leading-tight mb-1 hover:text-red-200 transition-colors">
+                  <div className="border-b border-blue-500/30 pb-3">
+                    <h4 className="font-bold text-sm leading-tight mb-1 hover:text-blue-200 transition-colors">
                       Jimmy Kimmel Show Cancelled Following Controversy  
                     </h4>
-                    <p className="text-red-100 text-xs opacity-90">
+                    <p className="text-blue-100 text-xs opacity-90">
                       1:45 PM
                     </p>
                   </div>
                   <div className="pb-0">
-                    <h4 className="font-bold text-sm leading-tight mb-1 hover:text-red-200 transition-colors">
+                    <h4 className="font-bold text-sm leading-tight mb-1 hover:text-blue-200 transition-colors">
                       Police Investigate 3 Destroyed Speed Cameras Across City
                     </h4>
-                    <p className="text-red-100 text-xs opacity-90">
+                    <p className="text-blue-100 text-xs opacity-90">
                       12:15 PM
                     </p>
                   </div>
@@ -121,7 +121,7 @@ const Index = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-l-sm text-white placeholder-gray-300"
               />
-              <button className="px-6 py-2 bg-red-600 hover:bg-red-700 font-bold uppercase text-sm tracking-wider rounded-r-sm transition-colors">
+              <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 font-bold uppercase text-sm tracking-wider rounded-r-sm transition-colors">
                 Subscribe
               </button>
             </div>
@@ -136,28 +136,28 @@ const Index = () => {
             <div>
               <h4 className="font-black text-lg mb-4 uppercase tracking-wide">Sections</h4>
               <div className="space-y-2 text-sm">
-                <div className="hover:text-red-400 cursor-pointer">Politics</div>
-                <div className="hover:text-red-400 cursor-pointer">Business</div>
-                <div className="hover:text-red-400 cursor-pointer">Sports</div>
-                <div className="hover:text-red-400 cursor-pointer">Culture</div>
+                <div className="hover:text-blue-400 cursor-pointer">Politics</div>
+                <div className="hover:text-blue-400 cursor-pointer">Business</div>
+                <div className="hover:text-blue-400 cursor-pointer">Sports</div>
+                <div className="hover:text-blue-400 cursor-pointer">Culture</div>
               </div>
             </div>
             <div>
               <h4 className="font-black text-lg mb-4 uppercase tracking-wide">About</h4>
               <div className="space-y-2 text-sm">
-                <div className="hover:text-red-400 cursor-pointer">Our Team</div>
-                <div className="hover:text-red-400 cursor-pointer">Editorial Policy</div>
-                <div className="hover:text-red-400 cursor-pointer">Contact Us</div>
-                <div className="hover:text-red-400 cursor-pointer">Careers</div>
+                <div className="hover:text-blue-400 cursor-pointer">Our Team</div>
+                <div className="hover:text-blue-400 cursor-pointer">Editorial Policy</div>
+                <div className="hover:text-blue-400 cursor-pointer">Contact Us</div>
+                <div className="hover:text-blue-400 cursor-pointer">Careers</div>
               </div>
             </div>
             <div>
               <h4 className="font-black text-lg mb-4 uppercase tracking-wide">Follow</h4>
               <div className="space-y-2 text-sm">
-                <div className="hover:text-red-400 cursor-pointer">Twitter</div>
-                <div className="hover:text-red-400 cursor-pointer">Facebook</div>
-                <div className="hover:text-red-400 cursor-pointer">Instagram</div>
-                <div className="hover:text-red-400 cursor-pointer">YouTube</div>
+                <div className="hover:text-blue-400 cursor-pointer">Twitter</div>
+                <div className="hover:text-blue-400 cursor-pointer">Facebook</div>
+                <div className="hover:text-blue-400 cursor-pointer">Instagram</div>
+                <div className="hover:text-blue-400 cursor-pointer">YouTube</div>
               </div>
             </div>
             <div>
@@ -175,7 +175,7 @@ const Index = () => {
           
           <div className="border-t border-gray-700 pt-6 text-center">
             <div className="flex items-center justify-center space-x-2 mb-2">
-              <Clock className="h-4 w-4 text-red-500" />
+              <Clock className="h-4 w-4 text-blue-500" />
               <span className="text-sm text-gray-400">© 2024 Toronto Ledger. All rights reserved.</span>
             </div>
             <p className="text-xs text-gray-500">
