@@ -11,11 +11,11 @@ const Index = () => {
   const latestArticles = regularArticles.slice(3);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <Header />
       
       {/* Main News Grid Layout */}
-      <main className="max-w-7xl mx-auto px-4 py-8">
+      <main className="max-w-7xl mx-auto px-4 py-8 flex-1">
         {/* Hero Section - CNN Style */}
         <section className="grid lg:grid-cols-3 gap-6 mb-8">
           {/* Main Featured Story */}
@@ -88,12 +88,12 @@ const Index = () => {
         {/* Categories Section */}
         <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {[
-            { name: 'Politics', color: 'bg-blue-600', count: 8 },
-            { name: 'Business', color: 'bg-green-600', count: 12 },
-            { name: 'Sports', color: 'bg-orange-600', count: 6 },
-            { name: 'Culture', color: 'bg-purple-600', count: 9 }
+            { name: 'Politics', count: 8 },
+            { name: 'Business', count: 12 },
+            { name: 'Sports', count: 6 },
+            { name: 'Culture', count: 9 }
           ].map((category) => (
-            <div key={category.name} className={`${category.color} text-white p-6 rounded-sm hover:scale-105 transition-transform cursor-pointer`}>
+            <div key={category.name} className="bg-gray-700 text-white p-6 rounded-sm hover:scale-105 hover:bg-gray-600 transition-all cursor-pointer">
               <h3 className="font-black text-xl mb-2 uppercase tracking-wide">{category.name}</h3>
               <p className="text-sm opacity-90">{category.count} articles</p>
             </div>
