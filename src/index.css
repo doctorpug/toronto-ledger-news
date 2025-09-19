@@ -50,9 +50,9 @@
     --sidebar-ring: 255 255 255;
     
     /* News-specific semantic colors */
-    --news-header: 17 24 39;
-    --news-subheader: 55 65 81;
-    --news-text: 31 41 55;
+    --news-header: 0 0 0;
+    --news-subheader: 75 85 99;
+    --news-text: 55 65 81;
     --news-meta: 107 114 128;
     --news-link: 204 0 0;
     --news-link-hover: 153 27 27;

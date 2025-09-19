@@ -35,7 +35,7 @@ const Index = () => {
                 <div className="space-y-3">
                   <div className="border-b border-red-500/30 pb-3">
                     <h4 className="font-bold text-sm leading-tight mb-1 hover:text-red-200 transition-colors">
-                      Charlie Kirk Shot in Downtown Toronto Incident
+                      Charlie Kirk Assassination Case Develops
                     </h4>
                     <p className="text-red-100 text-xs opacity-90">
                       2:30 PM
@@ -82,7 +82,7 @@ const Index = () => {
         {/* Latest News Grid */}
         <section className="mb-12">
           <div className="flex items-center space-x-3 mb-6">
-            <h2 className="text-3xl font-serif font-black text-news-header uppercase tracking-tight">Latest News</h2>
+            <h2 className="text-3xl font-serif font-black text-black uppercase tracking-tight">Latest News</h2>
             <div className="flex-1 h-1 bg-primary"></div>
           </div>
           
