@@ -12,19 +12,19 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 84% 5%;
     
-    /* Primary brand colors - Blue theme */
-    --primary: 214 100% 50%;
+    /* Primary brand colors - Dark blue theme */
+    --primary: 214 100% 30%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 214 95% 65%;
-    --primary-dark: 214 100% 35%;
+    --primary-light: 214 95% 45%;
+    --primary-dark: 214 100% 20%;
     
-    /* Secondary colors - Professional grey */
-    --secondary: 210 20% 25%;
+    /* Secondary colors - Black */
+    --secondary: 0 0% 10%;
     --secondary-foreground: 0 0% 100%;
     
-    /* Accent colors - Light blue */
-    --accent: 214 95% 65%;
-    --accent-foreground: 222 84% 5%;
+    /* Accent colors - Dark blue */
+    --accent: 214 80% 35%;
+    --accent-foreground: 0 0% 100%;
     
     /* Muted colors */
     --muted: 210 40% 98%;
@@ -54,11 +54,11 @@
     --news-subheader: 210 20% 25%;
     --news-text: 0 0% 40%;
     --news-meta: 0 0% 60%;
-    --news-link: 214 100% 50%;
-    --news-link-hover: 214 100% 35%;
+    --news-link: 214 100% 30%;
+    --news-link-hover: 0 0% 0%;
     
-    /* Breaking news colors - Blue theme */
-    --breaking: 214 100% 50%;
+    /* Breaking news colors - Dark blue theme */
+    --breaking: 214 100% 30%;
     --breaking-foreground: 0 0% 100%;
     --live: 142 76% 39%;
     --live-foreground: 0 0% 100%;

@@ -27,33 +27,33 @@ const Index = () => {
           
             {/* Recent News Sidebar */}
             <div className="space-y-6">
-              <div className="bg-blue-600 text-white p-4 rounded-sm">
+              <div className="bg-gray-900 text-white p-4 rounded-sm">
                 <div className="flex items-center space-x-2 mb-3">
                   <AlertCircle className="h-5 w-5" />
                   <h3 className="font-black uppercase text-sm tracking-wider">Recent News</h3>
                 </div>
                 <div className="space-y-3">
-                  <div className="border-b border-blue-500/30 pb-3">
-                    <h4 className="font-bold text-sm leading-tight mb-1 hover:text-blue-200 transition-colors">
+                  <div className="border-b border-gray-600 pb-3">
+                    <h4 className="font-bold text-sm leading-tight mb-1 hover:text-gray-300 transition-colors">
                       Charlie Kirk Assassination Case Develops
                     </h4>
-                    <p className="text-blue-100 text-xs opacity-90">
+                    <p className="text-gray-400 text-xs opacity-90">
                       2:30 PM
                     </p>
                   </div>
-                  <div className="border-b border-blue-500/30 pb-3">
-                    <h4 className="font-bold text-sm leading-tight mb-1 hover:text-blue-200 transition-colors">
+                  <div className="border-b border-gray-600 pb-3">
+                    <h4 className="font-bold text-sm leading-tight mb-1 hover:text-gray-300 transition-colors">
                       Jimmy Kimmel Show Cancelled Following Controversy  
                     </h4>
-                    <p className="text-blue-100 text-xs opacity-90">
+                    <p className="text-gray-400 text-xs opacity-90">
                       1:45 PM
                     </p>
                   </div>
                   <div className="pb-0">
-                    <h4 className="font-bold text-sm leading-tight mb-1 hover:text-blue-200 transition-colors">
+                    <h4 className="font-bold text-sm leading-tight mb-1 hover:text-gray-300 transition-colors">
                       Police Investigate 3 Destroyed Speed Cameras Across City
                     </h4>
-                    <p className="text-blue-100 text-xs opacity-90">
+                    <p className="text-gray-400 text-xs opacity-90">
                       12:15 PM
                     </p>
                   </div>
@@ -121,7 +121,7 @@ const Index = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-l-sm text-white placeholder-gray-300"
               />
-              <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 font-bold uppercase text-sm tracking-wider rounded-r-sm transition-colors">
+              <button className="px-6 py-2 bg-blue-800 hover:bg-blue-900 font-bold uppercase text-sm tracking-wider rounded-r-sm transition-colors">
                 Subscribe
               </button>
             </div>

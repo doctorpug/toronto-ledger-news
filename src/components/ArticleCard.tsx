@@ -45,7 +45,7 @@ const ArticleCard = ({ article, featured = false }: ArticleCardProps) => {
             {/* Trending Indicator for Featured */}
             {featured && (
               <div className="absolute top-4 right-4">
-                <div className="flex items-center space-x-1 bg-blue-600 text-white px-2 py-1 text-xs font-bold uppercase">
+                <div className="flex items-center space-x-1 bg-blue-800 text-white px-2 py-1 text-xs font-bold uppercase">
                   <TrendingUp className="h-3 w-3" />
                   <span>Trending</span>
                 </div>
