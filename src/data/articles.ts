@@ -149,7 +149,7 @@ The project represents years of community consultation and planning to ensure th
     publishDate: "2024-07-24",
     category: "Development",
     readTime: 6,
-    imageUrl: "/src/assets/quayside-development.jpg"
+    imageUrl: "/src/assets/quayside-aerial.png"
   },
   {
     id: "raptors-season-struggles",
