@@ -185,7 +185,7 @@ Team president Masai Ujiri emphasized patience and commitment to the rebuilding 
     publishDate: "2024-04-15",
     category: "Sports",
     readTime: 4,
-    imageUrl: "/src/assets/raptors-game.jpg"
+    imageUrl: "/src/assets/scotiabank-arena.png"
   },
   {
     id: "ttc-line-2-upgrades",
