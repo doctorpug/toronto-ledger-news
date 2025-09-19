@@ -25,30 +25,40 @@ const Index = () => {
             </div>
           )}
           
-          {/* Breaking News Sidebar */}
-          <div className="space-y-6">
-            <div className="bg-red-600 text-white p-4 rounded-sm">
-              <div className="flex items-center space-x-2 mb-3">
-                <AlertCircle className="h-5 w-5" />
-                <h3 className="font-black uppercase text-sm tracking-wider">Breaking News</h3>
-              </div>
-              <div className="space-y-3">
-                {breakingArticles.map((article) => (
-                  <div key={article.id} className="border-b border-red-500/30 pb-3 last:border-b-0 last:pb-0">
+            {/* Recent News Sidebar */}
+            <div className="space-y-6">
+              <div className="bg-red-600 text-white p-4 rounded-sm">
+                <div className="flex items-center space-x-2 mb-3">
+                  <AlertCircle className="h-5 w-5" />
+                  <h3 className="font-black uppercase text-sm tracking-wider">Recent News</h3>
+                </div>
+                <div className="space-y-3">
+                  <div className="border-b border-red-500/30 pb-3">
                     <h4 className="font-bold text-sm leading-tight mb-1 hover:text-red-200 transition-colors">
-                      {article.title}
+                      Charlie Kirk Shot in Downtown Toronto Incident
                     </h4>
                     <p className="text-red-100 text-xs opacity-90">
-                      {new Date(article.publishDate).toLocaleTimeString('en-US', {
-                        hour: 'numeric',
-                        minute: '2-digit',
-                        hour12: true
-                      })}
+                      2:30 PM
                     </p>
                   </div>
-                ))}
+                  <div className="border-b border-red-500/30 pb-3">
+                    <h4 className="font-bold text-sm leading-tight mb-1 hover:text-red-200 transition-colors">
+                      Jimmy Kimmel Show Cancelled Following Controversy  
+                    </h4>
+                    <p className="text-red-100 text-xs opacity-90">
+                      1:45 PM
+                    </p>
+                  </div>
+                  <div className="pb-0">
+                    <h4 className="font-bold text-sm leading-tight mb-1 hover:text-red-200 transition-colors">
+                      Police Investigate 3 Destroyed Speed Cameras Across City
+                    </h4>
+                    <p className="text-red-100 text-xs opacity-90">
+                      12:15 PM
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
             
             {/* Trending Topics */}
             <div className="bg-card border border-border rounded-sm p-4">
