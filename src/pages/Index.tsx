@@ -137,8 +137,8 @@ const Index = () => {
               <div className="flex items-center justify-center space-x-2 text-news-meta mb-2">
                 <Mail className="h-4 w-4" />
                 <span>Contact us: </span>
-                <a href="mailto:news@torontoledger.ca" className="news-link font-medium">
-                  news@torontoledger.ca
+                <a href="mailto:news@torontoledger.com" className="news-link font-medium">
+                  news@torontoledger.com
                 </a>
               </div>
               <p className="text-news-meta">
