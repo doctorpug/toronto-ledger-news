@@ -32,18 +32,18 @@ const Header = () => {
             <a href="/" onClick={handleHomeClick} className="news-link font-medium px-3 py-2 rounded-lg hover:bg-accent/50 transition-all">
               Home
             </a>
-            <a href="#politics" className="news-link font-medium px-3 py-2 rounded-lg hover:bg-accent/50 transition-all">
+            <Link to="/politics" className="news-link font-medium px-3 py-2 rounded-lg hover:bg-accent/50 transition-all">
               Politics
-            </a>
-            <a href="#business" className="news-link font-medium px-3 py-2 rounded-lg hover:bg-accent/50 transition-all">
+            </Link>
+            <Link to="/business" className="news-link font-medium px-3 py-2 rounded-lg hover:bg-accent/50 transition-all">
               Business
-            </a>
-            <a href="#culture" className="news-link font-medium px-3 py-2 rounded-lg hover:bg-accent/50 transition-all">
+            </Link>
+            <Link to="/culture" className="news-link font-medium px-3 py-2 rounded-lg hover:bg-accent/50 transition-all">
               Culture
-            </a>
-            <a href="#sports" className="news-link font-medium px-3 py-2 rounded-lg hover:bg-accent/50 transition-all">
+            </Link>
+            <Link to="/sports" className="news-link font-medium px-3 py-2 rounded-lg hover:bg-accent/50 transition-all">
               Sports
-            </a>
+            </Link>
           </nav>
         </div>
       </div>
