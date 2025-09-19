@@ -82,7 +82,7 @@ const Index = () => {
         {/* Latest News Grid */}
         <section className="mb-12">
           <div className="flex items-center space-x-3 mb-6">
-            <h2 className="text-3xl font-serif font-black text-black uppercase tracking-tight">Latest News</h2>
+            <h2 className="text-3xl font-serif font-black text-news-header uppercase tracking-tight">Latest News</h2>
             <div className="flex-1 h-1 bg-primary"></div>
           </div>
           
