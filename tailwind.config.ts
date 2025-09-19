@@ -66,10 +66,15 @@ export default {
         "news-meta": "hsl(var(--news-meta))",
         "news-link": "hsl(var(--news-link))",
         "news-link-hover": "hsl(var(--news-link-hover))",
+        "breaking": "hsl(var(--breaking))",
+        "breaking-foreground": "hsl(var(--breaking-foreground))",
+        "live": "hsl(var(--live))",
+        "live-foreground": "hsl(var(--live-foreground))",
       },
       fontFamily: {
-        'serif': ['Georgia', 'Times New Roman', 'serif'],
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'serif': ['Playfair Display', 'Georgia', 'Times New Roman', 'serif'],
+        'sans': ['Inter', 'Helvetica Neue', 'Arial', 'system-ui', 'sans-serif'],
+        'mono': ['JetBrains Mono', 'Monaco', 'Consolas', 'monospace'],
       },
       borderRadius: {
         lg: "var(--radius)",

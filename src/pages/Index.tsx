@@ -2,71 +2,82 @@ import Header from "@/components/Header";
 import ArticleCard from "@/components/ArticleCard";
 import { articles } from "@/data/articles";
 import torontoHero from "@/assets/toronto-hero.jpg";
-import { Mail, Users, Shield, Globe } from "lucide-react";
+import { Mail, TrendingUp, Clock, Users, AlertCircle } from "lucide-react";
 
 const Index = () => {
   const featuredArticle = articles.find(article => article.featured);
   const regularArticles = articles.filter(article => !article.featured);
+  const breakingArticles = regularArticles.slice(0, 3);
+  const latestArticles = regularArticles.slice(3);
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Enhanced Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="h-96 md:h-[32rem] bg-gradient-to-br from-primary via-primary-light to-primary-dark flex items-center justify-center">
-          <img 
-            src={torontoHero} 
-            alt="Toronto skyline" 
-            className="absolute inset-0 w-full h-full object-cover mix-blend-soft-light opacity-40"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-          <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 tracking-tight">
-              Toronto Ledger
-            </h1>
-            <p className="text-xl md:text-2xl opacity-95 max-w-3xl mx-auto leading-relaxed">
-              Your trusted source for Toronto news, politics, business, and culture
-            </p>
-            <div className="mt-8 flex items-center justify-center space-x-8 text-sm opacity-90">
-              <div className="flex items-center space-x-2">
-                <Users className="h-4 w-4" />
-                <span>Independent</span>
+      {/* Main News Grid Layout */}
+      <main className="max-w-7xl mx-auto px-4 py-8">
+        {/* Hero Section - CNN Style */}
+        <section className="grid lg:grid-cols-3 gap-6 mb-8">
+          {/* Main Featured Story */}
+          {featuredArticle && (
+            <div className="lg:col-span-2">
+              <ArticleCard article={featuredArticle} featured={true} />
+            </div>
+          )}
+          
+          {/* Breaking News Sidebar */}
+          <div className="space-y-6">
+            <div className="bg-red-600 text-white p-4 rounded-sm">
+              <div className="flex items-center space-x-2 mb-3">
+                <AlertCircle className="h-5 w-5" />
+                <h3 className="font-black uppercase text-sm tracking-wider">Breaking News</h3>
               </div>
-              <div className="flex items-center space-x-2">
-                <Shield className="h-4 w-4" />
-                <span>Trusted</span>
+              <div className="space-y-3">
+                {breakingArticles.map((article) => (
+                  <div key={article.id} className="border-b border-red-500/30 pb-3 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-sm leading-tight mb-1 hover:text-red-200 transition-colors">
+                      {article.title}
+                    </h4>
+                    <p className="text-red-100 text-xs opacity-90">
+                      {new Date(article.publishDate).toLocaleTimeString('en-US', {
+                        hour: 'numeric',
+                        minute: '2-digit',
+                        hour12: true
+                      })}
+                    </p>
+                  </div>
+                ))}
               </div>
-              <div className="flex items-center space-x-2">
-                <Globe className="h-4 w-4" />
-                <span>Local Focus</span>
+            </div>
+            
+            {/* Trending Topics */}
+            <div className="bg-card border border-border rounded-sm p-4">
+              <div className="flex items-center space-x-2 mb-4">
+                <TrendingUp className="h-5 w-5 text-primary" />
+                <h3 className="font-black uppercase text-sm tracking-wider text-news-header">Trending</h3>
+              </div>
+              <div className="space-y-2">
+                <div className="text-sm text-news-link font-semibold hover:text-news-link-hover cursor-pointer">#TorontoElection2024</div>
+                <div className="text-sm text-news-link font-semibold hover:text-news-link-hover cursor-pointer">#HousingCrisis</div>
+                <div className="text-sm text-news-link font-semibold hover:text-news-link-hover cursor-pointer">#TransitExpansion</div>
+                <div className="text-sm text-news-link font-semibold hover:text-news-link-hover cursor-pointer">#RaptorsPlayoffs</div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Main Content */}
-      <main className="container mx-auto px-6 py-12">
-        {/* Featured Article */}
-        {featuredArticle && (
-          <section className="mb-16 fade-in">
-            <div className="flex items-center space-x-3 mb-8">
-              <div className="w-1 h-8 bg-primary rounded-full"></div>
-              <h2 className="text-3xl font-serif font-bold text-news-header">Featured Story</h2>
-            </div>
-            <ArticleCard article={featuredArticle} featured={true} />
-          </section>
-        )}
+        {/* Section Divider */}
+        <div className="border-t-4 border-primary mb-8"></div>
 
-        {/* Latest Articles */}
-        <section className="mb-16">
-          <div className="flex items-center space-x-3 mb-8">
-            <div className="w-1 h-8 bg-primary rounded-full"></div>
-            <h2 className="text-3xl font-serif font-bold text-news-header">Latest News</h2>
+        {/* Latest News Grid */}
+        <section className="mb-12">
+          <div className="flex items-center space-x-3 mb-6">
+            <h2 className="text-3xl font-serif font-black text-news-header uppercase tracking-tight">Latest News</h2>
+            <div className="flex-1 h-1 bg-primary"></div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularArticles.map((article, index) => (
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {latestArticles.map((article, index) => (
               <div key={article.id} className="fade-in" style={{ animationDelay: `${index * 100}ms` }}>
                 <ArticleCard article={article} />
               </div>
@@ -74,94 +85,91 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Enhanced About Section */}
-        <section className="bg-gradient-to-br from-secondary via-muted/50 to-accent/30 rounded-2xl p-12 fade-in">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-serif font-bold mb-4 text-news-header">About Toronto Ledger</h2>
-              <p className="text-xl text-news-subheader max-w-3xl mx-auto">
-                The city's premier independent news source, serving Toronto's diverse communities since our founding.
-              </p>
+        {/* Categories Section */}
+        <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {[
+            { name: 'Politics', color: 'bg-blue-600', count: 8 },
+            { name: 'Business', color: 'bg-green-600', count: 12 },
+            { name: 'Sports', color: 'bg-orange-600', count: 6 },
+            { name: 'Culture', color: 'bg-purple-600', count: 9 }
+          ].map((category) => (
+            <div key={category.name} className={`${category.color} text-white p-6 rounded-sm hover:scale-105 transition-transform cursor-pointer`}>
+              <h3 className="font-black text-xl mb-2 uppercase tracking-wide">{category.name}</h3>
+              <p className="text-sm opacity-90">{category.count} articles</p>
             </div>
-            
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <p className="text-lg text-news-text leading-relaxed">
-                  Toronto Ledger is committed to delivering accurate, timely, and comprehensive coverage 
-                  of the stories that matter most to Torontonians. We believe in the power of independent journalism 
-                  to inform, engage, and strengthen our community.
-                </p>
-                <p className="text-news-text leading-relaxed">
-                  From breaking news and politics to business, culture, and sports, we cover the full spectrum 
-                  of life in one of the world's most diverse and dynamic cities.
-                </p>
-              </div>
-              
-              <div className="bg-card rounded-xl p-8 shadow-lg border border-border/50">
-                <h3 className="font-serif font-bold text-2xl mb-6 text-news-header">Our Values</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Shield className="h-4 w-4 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-news-header mb-1">Integrity</h4>
-                      <p className="text-news-text text-sm">Fact-based, unbiased reporting you can trust</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Users className="h-4 w-4 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-news-header mb-1">Community</h4>
-                      <p className="text-news-text text-sm">Amplifying local voices and stories that matter</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Globe className="h-4 w-4 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-news-header mb-1">Diversity</h4>
-                      <p className="text-news-text text-sm">Reflecting Toronto's rich multicultural identity</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mt-12 pt-8 border-t border-border/50 text-center">
-              <div className="flex items-center justify-center space-x-2 text-news-meta mb-2">
-                <Mail className="h-4 w-4" />
-                <span>Contact us: </span>
-                <a href="mailto:news@torontoledger.com" className="news-link font-medium">
-                  news@torontoledger.com
-                </a>
-              </div>
-              <p className="text-news-meta">
-                Follow us on social media for the latest updates
-              </p>
+          ))}
+        </section>
+
+        {/* Newsletter Signup */}
+        <section className="bg-gradient-to-r from-gray-900 to-black text-white p-8 rounded-sm mb-12">
+          <div className="max-w-2xl mx-auto text-center">
+            <h3 className="text-2xl font-black mb-4 uppercase tracking-wide">Stay Informed</h3>
+            <p className="mb-6 text-gray-300">Get breaking news and daily updates delivered to your inbox</p>
+            <div className="flex max-w-md mx-auto">
+              <input 
+                type="email" 
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-l-sm text-white placeholder-gray-300"
+              />
+              <button className="px-6 py-2 bg-red-600 hover:bg-red-700 font-bold uppercase text-sm tracking-wider rounded-r-sm transition-colors">
+                Subscribe
+              </button>
             </div>
           </div>
         </section>
       </main>
 
-      {/* Enhanced Footer */}
-      <footer className="bg-gradient-to-r from-muted to-secondary/50 mt-16 py-12">
-        <div className="container mx-auto px-6">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-2 mb-4">
-              <div className="w-2 h-2 bg-primary rounded-full"></div>
-              <p className="text-news-meta font-medium">
-                © 2024 Toronto Ledger. All rights reserved.
-              </p>
-              <div className="w-2 h-2 bg-primary rounded-full"></div>
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-8">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <h4 className="font-black text-lg mb-4 uppercase tracking-wide">Sections</h4>
+              <div className="space-y-2 text-sm">
+                <div className="hover:text-red-400 cursor-pointer">Politics</div>
+                <div className="hover:text-red-400 cursor-pointer">Business</div>
+                <div className="hover:text-red-400 cursor-pointer">Sports</div>
+                <div className="hover:text-red-400 cursor-pointer">Culture</div>
+              </div>
             </div>
-            <p className="text-news-meta text-sm">
-              Independent journalism for Toronto's diverse communities
+            <div>
+              <h4 className="font-black text-lg mb-4 uppercase tracking-wide">About</h4>
+              <div className="space-y-2 text-sm">
+                <div className="hover:text-red-400 cursor-pointer">Our Team</div>
+                <div className="hover:text-red-400 cursor-pointer">Editorial Policy</div>
+                <div className="hover:text-red-400 cursor-pointer">Contact Us</div>
+                <div className="hover:text-red-400 cursor-pointer">Careers</div>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-black text-lg mb-4 uppercase tracking-wide">Follow</h4>
+              <div className="space-y-2 text-sm">
+                <div className="hover:text-red-400 cursor-pointer">Twitter</div>
+                <div className="hover:text-red-400 cursor-pointer">Facebook</div>
+                <div className="hover:text-red-400 cursor-pointer">Instagram</div>
+                <div className="hover:text-red-400 cursor-pointer">YouTube</div>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-black text-lg mb-4 uppercase tracking-wide">Contact</h4>
+              <div className="space-y-2 text-sm text-gray-400">
+                <div className="flex items-center space-x-2">
+                  <Mail className="h-4 w-4" />
+                  <span>news@torontoledger.com</span>
+                </div>
+                <div>Toronto, ON</div>
+                <div>+1 (416) 555-NEWS</div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="border-t border-gray-700 pt-6 text-center">
+            <div className="flex items-center justify-center space-x-2 mb-2">
+              <Clock className="h-4 w-4 text-red-500" />
+              <span className="text-sm text-gray-400">© 2024 Toronto Ledger. All rights reserved.</span>
+            </div>
+            <p className="text-xs text-gray-500">
+              Independent journalism • Serving Toronto since 2024
             </p>
           </div>
         </div>
